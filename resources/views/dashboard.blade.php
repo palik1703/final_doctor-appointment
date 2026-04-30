@@ -25,7 +25,12 @@
                         </a>
                     </div>
                     @endif
-                    <h3 class="text-lg font-bold mb-4">Мои предстоящие приемы:</h3>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-bold">Мои предстоящие приемы:</h3>
+                        <a href="{{ route('home') }}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm font-semibold" style="text-decoration: none;">
+                            + Новая запись
+                        </a>
+                    </div>
 
                     @if($appointments->isEmpty())
                     <p class="text-gray-500">У вас пока нет активных записей к врачам.</p>
