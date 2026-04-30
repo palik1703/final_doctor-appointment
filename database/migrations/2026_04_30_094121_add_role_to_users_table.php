@@ -12,7 +12,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            // Добавляем роль. По умолчанию все новые зарегистрированные — пациенты
             $table->string('role')->default('patient');
         });
     }

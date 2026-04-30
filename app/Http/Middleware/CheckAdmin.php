@@ -11,7 +11,6 @@ class CheckAdmin
 {
     public function handle(Request $request, Closure $next): Response
     {
-        // Проверяем, что пользователь авторизован и его роль == admin
         if (Auth::check() && Auth::user()->role === 'admin') {
             return $next($request);
         }
